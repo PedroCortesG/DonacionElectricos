@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.main-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    width: 100%;
+    text-align: justify;
+}
+.navBar {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: .3em .3em 0px 0px rgb(65, 65, 65);
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 0em 1em 2em 0em;
+}
+
+.navBar h2 {
+    font-family: "Fira Code", monospace;
+    margin: .5em;
+    margin-right: auto;
+}
+
+.navButtons {
+    cursor: pointer;
+    background-color: #dadada;
+    width: 10%;
+    text-align: center;
+    padding: .5em;
+    margin: .5em;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px black;
+    border-radius: .3em;
+}
+
+.postButtons {
+    cursor: pointer;
+    background-color: #2dcf0d79;
+    width: 10%;
+    text-align: center;
+    padding: .5em;
+    margin: .5em;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px rgb(19, 112, 0);
+    border-radius: .3em;
+}
+
+.postButtons:hover {
+    background-color: #228f0c;
+    color: white;
+    transition: 0.2s ease;
+}
+
+#valBoxValid {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#informacionRecibida {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(12, 155, 107);
+}
+
+#confirm {
+    cursor: pointer;
+    background-color: #2dcf0d79;
+    width: 10%;
+    text-align: center;
+    padding: .5em;
+    margin: .5em;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px rgb(19, 112, 0);
+    border-radius: .3em;
+}
+
+#back {
+    cursor: pointer;
+    background-color: #cf0d0d79;
+    width: 10%;
+    text-align: center;
+    padding: .5em;
+    margin: .5em;
+    border: .2em solid var(--black-color);
+    box-shadow: .175em .175em 0px 0px rgb(112, 0, 0);
+    border-radius: .3em;
+    
+}
+
+#imagenAgrandada {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#indexBox {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(12, 155, 107);
+}
+

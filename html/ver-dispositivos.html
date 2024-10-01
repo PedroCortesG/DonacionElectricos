@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ver Dispositivos</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: 5%;
+          margin-left: 5%;
+        }
+        
+        td, th {
+          border: 2px solid #000000;
+          text-align: center;
+          padding: 20px;
+        }
+        
+        tr:nth-child(1) {
+          background-color: #dddddd;
+          text-align: justify;
+        }
+        img {
+            height: 120px;
+            width: 120px;
+        }
+        </style>
+</head>
+<body>
+    <div id="verDispositivosBarra" class="navBar">
+        <h2>Donacion de dispositivos Electronicos</h2>
+        <button class="navButtons" type="button" value="Redirect" onclick="irALink('index.html')">Volver al Inicio</button>
+        <button class="navButtons" value="Redirect" onclick="irALink('agregar-donacion.html')">Agregar Dispositivos</button>
+    </div>
+
+    <div>
+    <h2>Tabla de dispositivos</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Nombre Dispositivo</th>
+            <th>Estado</th>
+            <th>Comuna</th>
+            <th>Fotos</th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Celular</th>
+            <th>Iphone 5</th>
+            <th>funciona perfecto</th>
+            <th>La reina</th><th>
+            <img src = "../images/iphone.jpg" alt="imagen de Celular">
+                </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Pantalla</th>
+            <th>Monitor</th>
+            <th>funciona perfecto</th>
+            <th>Lo prado</th>
+            <th>
+            <img src = "../images/pc.jpg" alt="imagen de Pantalla">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>notebook</th>
+            <th>laptop</th>
+            <th>funciona a medias</th>
+            <th>Estacion central</th>
+            <th>
+            <img src = "../images/laptop.jpg" alt="imagen de Notebook">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Consola</th>
+            <th>Xbox S</th>
+            <th>no funciona</th>
+            <th>Las condes</th>
+            <th>
+            <img src = "../images/xbox.jpg" alt="imagen de Consola">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Teclado</th>
+            <th>teclado generico</th>
+            <th>no funciona</th>
+            <th>Providencia</th>
+            <th>
+            <img src = "../images/keyboard.jpg" alt="imagen de Teclado">
+            </th>
+        </tr>
+    </table>
+    </div>
+    <script src="../js/redirects.js"></script>
+</body>
+</html>

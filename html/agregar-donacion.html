@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Agregar Donacion</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <div id="agregarDonacionBarra" class="navBar">
+        <h2>Donacion de dispositivos Electronicos</h2>
+        <button class="navButtons" type="button" value="Redirect" onclick="irALink('index.html')">Volver al Inicio</button>
+        <button class="navButtons" value="Redirect" onclick="irALink('ver-dispositivos.html')">Ver Dispositivos</button>
+    </div>
+    <div id="informacionRecibida" hidden>
+        <h2 id="mensajeInfoRecibida">Hemos recibido la informacion de su donacion. Muchas gracias.</h2>
+        <button class="postButtons" type="button" value="Redirect" onclick="irALink('informacion-dispositivo.html')">Volver a la pantalla principal</button>
+    </div>
+    <div class="main-container">
+        <div id="valBoxValid" hidden>
+            <h2 id="valMsgValid"></h2>
+            <ul id="valListValid"></ul>
+        </div>
+        <div id="val-box" hidden>   
+            <h2 id="val-msg"></h2>
+            <ul id="val-list"></ul>
+        </div>
+        <form name="informacionDonante" id="informacionDonante" method="post" enctype="multipart/form-data">
+            <h1>Agregar Donaciones</h1>
+            <h2>Informacion de Contacto</h2>
+            <label for="nombreDonante">Nombre</label>
+            <input type="text" size="80" name="nombreDonante" id="nombreDonante" minlength="3" maxlength="80" required><br>
+
+            <label for="emailDonante">Email</label>
+            <input type="email" size="30" name="emailDonante" id="emailDonante" required><br>
+
+            <label for="numeroCelular">Numero Celular</label>
+            <input type="tel" size="15" name="numeroCelular" id="numeroCelular" minlength="9" placeholder="+569 12345678" required><br>
+
+            <label for="Region">Region</label>
+            <select name="Region" id="Region" required>
+                <option value="">--Seleccione Region--</option>
+            </select><br>
+
+            <label for="Comuna">Comuna</label>
+            <select name="Comuna" id="Comuna" required>
+                <option value="">--Seleccione Comuna--</option>
+            </select><br>
+        </form>
+        <div id="val-boxDonacion" hidden>   
+            <h2 id="val-msgDonacion"></h2>
+            <ul id="val-listDonacion"></ul>
+        </div>
+        <form name="infoDonacion1" id="infoDonacion1" method="post" enctype="multipart/form-data">
+
+            <h2>Informacion de Dispositivo</h2>
+            <label for="nombreDispositivo">Nombre</label>
+            <input type="text" size="80" name="nombreDispositivo" id="nombreDispositivo" minlength="3" required><br>
+
+            <label for="descripcionDispositivo">Descripcion</label>
+            <textarea class="descripcionDispo" name="descripcionDispositivo" id="descripcionDispositivo" rows="4" cols="50" minlength="1" required></textarea><br>
+
+            <label for="tipoDispositivo">Tipo</label>
+            <select name="tipoDispositivo" id="tipoDispositivo" required>
+                <option value="">--Seleccione tipo de Dispositivo--</option>
+            </select><br>
+
+            <label for="annosDispositivo">Años de uso</label>
+            <input type="text" name="annosDispositivo" id="annosDispositivo" minlength="1" maxlength="99" required><br>
+
+            <label for="estadoDispositivo">Estado de Funcionamiento</label>
+            <select name="estadoDispositivo" id="estadoDispositivo" required>
+                <option value="">--Seleccione Estado de Funcionamiento--</option>
+            </select><br>
+
+            <label for="fotosDispositivo">Fotos de productos</label>
+            <input type="file" name="fotosDispositivo" id="fotosDispositivo" multiple accept="image/*,.pdf" required><br>
+            
+        </form>
+        
+    </div>
+    <button class="postButtons" type="button" onclick="agregarDispositivo(event)">Agregar otro dispositivo a esta donacion</button>
+    <button class="postButtons" id="submit-btn" type="button">Publicar esta donacion</button>
+    <script src="../js/select.js"></script>
+    <script src="../js/agregarDispositivos.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/redirects.js"></script>
+</body>
+</html>
