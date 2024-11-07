@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Informacion Dispositivo{% endblock %}
+{% block content %}
+
+    <div class="main-container" id="infoDispositivo">
+        <div id="infoContactoDispositivo">
+            <h2>Informacion de Contacto</h2>
+            <p>Nombre: Pedro Cortes Garrido</p>
+            <p>Email: pedro@mail.com</p>
+            <p>Numero celular donante: +569 12345678</p>
+            <p>Region: Region Metropolitana de Santiago</p>
+            <p>Comuna: Santiago</p>
+        </div>
+        <div id="infoDispositivoDispositivo">
+            <h2>Informacion del Dispositivo</h2>
+            <p>Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero excepturi, quia voluptates dignissimos reprehenderit nemo nobis nesciunt ratione enim deleniti at tempore debitis?</p>
+            <p>Tipo: Celular</p>
+            <p>Años de uso: 5 años</p>
+            <p>Estado de Funcionamiento: funciona perfecto</p>
+            <p>Fotos de producto</p>
+       <!--     <img src="../images/iphone.jpg" width="640" height="480" alt="imagen de celular" onclick="activarImagen()">  
+            <img id="imagenAgrandada" src="../images/iphone.jpg" width="1280" height="1024" alt="imagen de Celular agrandada" onclick="activarImagen()" hidden>  -->
+        </div>
+        <div id="comentarioDispositivo">
+            <h2>Comentarios del Dispositivo</h2>
+            <h3>Comentario 1:</h3>
+            <p>Fecha: 01/01/2000</p>
+            <p>Nombre del Comentarista: Nombre Apellido</p>
+            <p>Comentario: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div id="val-boxComentario" hidden>   
+            <h2 id="val-msgComentario"></h2>
+            <ul id="val-listComentario"></ul>
+        </div>
+        <form name="agregarComentario" id="agregarComentario" method="post" enctype="multipart/form-data">
+            <h2>Agregar Comentario</h2>
+            <label for="nombreComentario">Nombre</label>
+            <input type="text" size="80" name="nombreComentario" id="nombreComentario" minlength="3" maxlength="80" required><br>
+            
+            <label for="descripcionComentario">Descripcion</label>
+            <textarea class="descripcionDispo" name="descripcionComentario" id="descripcionComentario" rows="4" cols="50" minlength="5" maxlength="200" required></textarea><br>
+            <button class="postButtons" type="button" id="enviarComentario" onclick="validateComentario()">Agregar Comentario</button>
+
+        </form>
+    </div>
+
+{% endblock content %}
+
+
+{% block javascript %}
+    <script src="{{ url_for('static', filename = 'js/validation.js') }}"></script>
+{% endblock javascript %}

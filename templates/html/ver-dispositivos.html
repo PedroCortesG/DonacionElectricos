@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Ver Dispositivos{% endblock %}
+
+
+{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}"/>
+{% endblock %}
+    <div>
+    <h2>Tabla de dispositivos</h2>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Nombre Dispositivo</th>
+            <th>Estado</th>
+            <th>Comuna</th>
+            <th>Fotos</th>
+        </tr>
+        <!--window.location.href='{{ url_for('index') }}'-->
+        <tr onclick="">
+            <th>Celular</th>
+            <th>Iphone 5</th>
+            <th>funciona perfecto</th>
+            <th>La reina</th><th>
+            <img src = "../images/iphone.jpg" alt="imagen de Celular">
+                </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Pantalla</th>
+            <th>Monitor</th>
+            <th>funciona perfecto</th>
+            <th>Lo prado</th>
+            <th>
+            <img src = "../images/pc.jpg" alt="imagen de Pantalla">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>notebook</th>
+            <th>laptop</th>
+            <th>funciona a medias</th>
+            <th>Estacion central</th>
+            <th>
+            <img src = "../images/laptop.jpg" alt="imagen de Notebook">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Consola</th>
+            <th>Xbox S</th>
+            <th>no funciona</th>
+            <th>Las condes</th>
+            <th>
+            <img src = "../images/xbox.jpg" alt="imagen de Consola">
+            </th>
+        </tr>
+        <tr onclick="irALink('informacion-dispositivo.html')">
+            <th>Teclado</th>
+            <th>teclado generico</th>
+            <th>no funciona</th>
+            <th>Providencia</th>
+            <th>
+            <img src = "../images/keyboard.jpg" alt="imagen de Teclado">
+            </th>
+        </tr>
+    </table>
+    </div>
+
+
+{% endblock content %}

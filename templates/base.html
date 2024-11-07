@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navBar">
+            <h2>Donacion de dispositivos Electronicos</h2>
+            <a class="navButtons" href="{{ url_for('index') }}">Volver al Inicio</a>
+            <a class="navButtons" href="{{ url_for('goVerDispositivos') }}">Ver Dispositivos</a>
+            <a class="navButtons" href="{{ url_for('goAgregarDonacion') }}">Agregar Donacion</a>
+        </div>
+    </nav>
+</body>
+<section>
+    {% block content %}{% endblock %} {% block javascript %}{% endblock %}
+</section>
+</html>

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}Agregar Donacion{% endblock %}
+{% block content %}
+    <body>
+        <div id="informacionRecibida" hidden>
+            <h2 id="mensajeInfoRecibida">Hemos recibido la informacion de su donacion. Muchas gracias.</h2>
+            <a class="postButtons" href="{{ url_for('index') }}">Volver a la pantalla principal</a>
+        </div>
+        <form method="post" name="formulario" id="formulario" action="{{ url_for('goAgregarDonacion') }}" enctype="multipart/form-data">
+            <div class="main-container">
+                <div id="valBoxValid" hidden>
+                    <h2 id="valMsgValid"></h2>
+                    <ul id="valListValid"></ul>
+                </div>
+                <div id="val-box" hidden>   
+                    <h2 id="val-msg"></h2>
+                    <ul id="val-list"></ul>
+                </div>
+                <div name="informacionDonante" id="informacionDonante">
+                    {% if error %}
+                    <div class="error-message">
+                        <div style="background-color: rgb(255, 221, 221); border-left-color: rgb(244, 67, 54);" >
+                            <li>{{ error }}</li>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <h1>Agregar Donaciones</h1>
+                    <h2>Informacion de Contacto</h2>
+                    <label for="nombreDonante">Nombre</label>
+                    <input type="text" size="80" name="nombreDonante" id="nombreDonante" minlength="3" maxlength="80" required><br>
+
+                    <label for="emailDonante">Email</label>
+                    <input type="email" size="30" name="emailDonante" id="emailDonante" required><br>
+
+                    <label for="numeroCelular">Numero Celular</label>
+                    <input type="tel" size="15" name="numeroCelular" id="numeroCelular" minlength="9" placeholder="+569 12345678"><br>
+
+                    <label for="Region">Region</label>
+                    <select name="Region" id="Region" required>
+                        <option value="">--Seleccione Region--</option>
+                    </select><br>
+
+                    <label for="Comuna">Comuna</label>
+                    <select name="Comuna" id="Comuna" required>
+                        <option value="">--Seleccione Comuna--</option>
+                    </select><br>
+                </div>
+                <div id="val-boxDonacion" hidden>   
+                    <h2 id="val-msgDonacion"></h2>
+                    <ul id="val-listDonacion"></ul>
+                </div>
+                <div name="infoDonacion1" id="infoDonacion1">
+
+                    <h2>Informacion de Dispositivo</h2>
+                    <label for="nombreDispositivo">Nombre</label>
+                    <input type="text" size="80" name="nombreDispositivo1" id="nombreDispositivo" minlength="3" required><br>
+
+                    <label for="descripcionDispositivo">Descripcion</label>
+                    <textarea class="descripcionDispo" name="descripcionDispositivo1" id="descripcionDispositivo" rows="4" cols="50" minlength="1"></textarea><br>
+
+                    <label for="tipoDispositivo">Tipo</label>
+                    <select name="tipoDispositivo1" id="tipoDispositivo" required>
+                        <option>--Seleccione tipo de Dispositivo--</option>
+                    </select><br>
+
+                    <label for="annosDispositivo">Años de uso</label>
+                    <input type="number" name="annosDispositivo1" id="annosDispositivo" min="1" max="99" required><br>
+
+                    <label for="estadoDispositivo">Estado de Funcionamiento</label>
+                    <select name="estadoDispositivo1" id="estadoDispositivo" required>
+                        <option>--Seleccione Estado de Funcionamiento--</option>
+                    </select><br>
+
+                    <label for="fotosDispositivo">Fotos de productos</label>
+                    <input type="file" name="fotosDispositivo1" id="fotosDispositivo" multiple accept="image/*,.pdf" required><br>
+                    
+
+                </div>
+                
+            </div>
+        </form>
+        <button class="postButtons" id="submit-btn">Publicar esta donacion</button>
+        <button class="postButtons" type="button" onclick="agregarDispositivo(event)">Agregar otro dispositivo a esta donacion</button>
+
+    </body>
+{% endblock content %}
+{% block javascript %}
+
+    <script src="{{ url_for('static', filename = 'js/select.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/agregarDispositivos.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/validation.js') }}"></script>
+
+{% endblock javascript %}

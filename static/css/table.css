@@ -1,0 +1,22 @@
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-left: 5%;
+  }
+  
+  td, th {
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  tr:nth-child(1) {
+    background-color: #dddddd;
+    text-align: justify;
+  }
+  img {
+      height: 120px;
+      width: 120px;
+  }
